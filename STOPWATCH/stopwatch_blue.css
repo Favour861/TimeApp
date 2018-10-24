@@ -1,0 +1,91 @@
+main{
+	margin: 20px auto;
+	width: 70%;
+	background: url(background.jpg);
+	background-size: 100%;
+	height: auto;
+	color: white;
+	padding: 1%;
+}
+#header{
+	border: 1px solid #376392;
+	text-align: center;
+	padding-left: 50px;
+	padding-right: 50px;
+	margin: -5px;
+	border-bottom-left-radius: 50px;
+	border-bottom-right-radius: 50px;
+	background: white;
+}
+#line{
+	height: 3px;
+	background: white;
+	margin-top: 7px;
+}
+table{
+	margin: 20px auto;
+	font-size: 500%;
+	text-align: center;
+	font-family: lcd;
+}
+button:active{
+	transform: translateY(4px);
+}
+#lap{
+	cursor: pointer;
+	background: unset;
+	border-style: none;
+	transition: 1s;
+}
+#lap:hover{
+	
+	background: white;
+	border: 2px solid #376392;
+}
+#start{
+	border-radius: 100%;
+	border: 2px solid #376392;
+	background: white;
+	padding: 10px;
+	cursor: pointer;
+	transition: 1s;
+}
+#start:hover{
+	background: white;
+}
+#pause{
+	border-radius: 100%;
+	border: 2px solid #376392;
+	background: white;
+	padding: 10px;
+	position: relative;
+	transition: 1s;
+	
+	display: none;
+	margin-left: -79px;
+}
+#pause:hover{
+	background: white;
+}
+#reset{
+	cursor: pointer;
+	background: unset;
+	border-style: none;
+	transition: 1s;
+}
+#reset:hover{
+	
+	background: white;
+	border: 2px solid #376392;
+}
+#lap1{
+	margin-top: 5%;
+	font-family: lcd;
+	font-size: 150%;
+	column-count: 7;
+	max-height: 500px;
+	border-top: 2px dashed #376392;
+	border-bottom: 2px dashed #376392;
+	color: #376392;
+
+}

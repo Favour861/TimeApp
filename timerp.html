@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>APPS</title>
+	<meta charset="utf-8">
+	<link rel="stylesheet" type="text/css" href="timerp.css">
+</head>
+<script type="text/javascript">
+	     function countDown() {
+        //     if(sc.value > 59){
+        //         alert("Invalid Input");
+        //     }
+        //     if(sc.value < 0){
+        //         alert("Invalid Input");
+        //     }
+        //  if (sc.value > -1 && sc.value < 60){
+        //     sc.value--;
+        //     setTimeout(countDown,1000);             
+        //  }
+        //  if (sc.value < 0){
+        //         sc.value=0;
+        //     }
+        // if (sc.value<=9){
+        //     sc.value="0"+ sc.value;
+        // }
+        // if (sc.value < 1 || sc.value > 59) {
+        //     alert("Invalid Input");
+        // }
+        // if(hr.value > 0 && hr.value<){
+
+        // }
+        
+        // if (hr.value="" sc.value="" && mn.value<0){
+        //     alert("Time UP!!!");
+        // }
+        // if (hr.value=0 && sc.value<0 && mn.value<0){
+        //     alert("Time UP!!!");
+        
+        if (hr.value > 0){
+
+            if(mn.value==""){
+                hr.value--;
+                mn.value=60;
+            }
+
+            if(mn.value<1 && sc.value=="0"){
+                hr.value--;
+                mn.value=60;
+            }
+        }
+        if(mn.value >= 0 && mn.value<=60){
+            if(sc.value==""){
+                mn.value--;
+                sc.value=60;
+            }
+            if(sc.value=="0"){
+                mn.value--;
+                sc.value=60;
+            }if (mn.value<0){
+                mn.value=0;
+                sc.value=0;
+                alert("Time UP!!!");
+            }
+        }
+        if(sc.value >= 1 && sc.value<=60){
+            sc.value--;
+            setTimeout(countDown, 1000);
+        }
+        if (sc.value <= 9 && sc.value > 0){
+            sc.value= "0" + sc.value;
+        }
+        
+     }
+    </script>
+</head>
+<body>
+	<div id="navbar">
+		<ul id="navlist">
+			<li><a href="home.html">Home</a></li>
+		</ul>
+		<!-- <span id="toggle">
+			<span><a href="red_theme.html">RED CLASSIC</a></span>
+			<span><a href="blue_theme.html">BLUE CORPORATE</a></span>
+		</span> -->
+	</div>
+	<main>
+		<section>
+		<div class="timer">
+			<h1 align="center">COUNTDOWN TIMER</h1>
+			<table align="center">
+				<tr>
+					<td id="Hour"><input placeholder="HR" class="input" type="text" id="hr">&nbsp;<h2 style="display: inline; color: white">:</h2></td>
+					<td id="Minute"><input placeholder="MN" class="input" type="text" id="mn">&nbsp;<h2 style="display: inline; color: white">:</h2></td>
+					<td id="Seconds"><input placeholder="SC" class="input" type="text" id="sc"></td>
+				</tr>
+				<tr>
+					<td colspan="3" align="center"><button class="start" onclick="countDown()">START</button></td>
+				</tr>
+			</table>
+            <p align="center">&#169; All rights reserved. <b>Favour Corporation</b></p>
+		</div>
+		</section>
+	</main>
+</body>
+</html>

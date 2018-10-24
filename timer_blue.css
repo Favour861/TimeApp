@@ -1,0 +1,134 @@
+body{
+	font-family: segoe UI;
+}
+#navbar{
+	position: fixed;
+	top:0;
+	right: 0;
+	left: 0;
+	background: #376392;
+	font-size: 17pt;
+	text-align: center;
+	box-shadow: 0 4px 2px #A0522D;
+
+}
+a{
+	transition: 1s;
+}
+#navbar a:link{
+	text-decoration: none;
+	color: white;
+
+}
+#navbar a:visited{
+	text-decoration: none;
+	color: white;
+}
+#navbar a:hover{
+	text-decoration: underline;
+}
+#navlist{
+	list-style-type: none;
+}
+li{
+	display: inline;
+	margin-right: 30px;
+}
+section{
+	background: url(TIMER/background.jpg);
+	background-color: #00BFFF;
+	background-repeat: no-repeat;
+	background-size: 100%;
+	width: 100%;
+	height: 500px;
+	border-radius: 20px;
+	border-top: 2 dotted #778899;
+	border-right: 2px dotted #9400D3;
+	border-bottom: 2px dotted #BA55D3;
+	border-left: 2px dotted #778899;
+}
+table{
+	margin-top: 80px;
+}
+h1{
+	font-family: Aharoni;
+	border-top-left-radius: 20px;
+	border-top-right-radius: 20px;
+	color: white;
+	margin-top: 0px;
+	background: #5897C3;
+	animation-name: bgchange;
+	animation-duration: 5s;
+	animation-iteration-count: infinite;
+	box-shadow: 2px 2px 5px white;
+}
+@keyframes bgchange{
+	0% {background: #5897C3}
+	50% {background: #778899}
+
+}
+.input{
+	height: 50px;
+	width: 50px;
+	background: white;
+	color: black;
+	border-radius: 5px;
+	border: 2px solid #081F2C;
+	padding: 5px;
+	font-size: 20pt;
+	transition: 0.5s;
+}
+input:focus{
+	width: 70px;
+}
+input[placeholder]{
+	font-family: verdana;
+	font-size: 20pt;
+}
+main{
+	border-radius: 20px;
+	margin: 70px auto;
+	width: 70%;
+	border-top: 5px solid #778899;
+	border-right: 5px solid #9400D3;
+	border-bottom: 5px solid #778899;
+	border-left: 5px solid #9400D3;
+	background: white;
+	padding: 10px; 
+}
+.start{
+	margin-top: 70px;
+	border-radius: 5px;
+	height: 50px;
+	width: 150px;
+	background: linear-gradient(#5897C3, #9400D3);
+	color: white;
+	border-style: none;
+	font-family: Aharoni;
+	font-size: 20pt;
+	box-shadow: 2px 5px 5px black;
+	cursor: pointer;
+	transition: 0.5s;
+}
+.start:hover{
+	width: 100%;
+	text-decoration: underline;
+}
+p{
+	margin-top: 18%;
+	font-family: Segoe UI;
+	
+}
+#bottom-fixed{
+	bottom: 0;
+	right: 0;
+	left: 0;
+	background: #081F2C;
+	position: fixed;
+	opacity: 0.8;
+	color: white;
+	z-index: 1000;
+	padding: 10px;
+	text-align: center;
+	padding-top: 0;
+}

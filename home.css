@@ -1,0 +1,117 @@
+body{
+	font-family: segoe UI;
+}
+#navbar{
+	position: fixed;
+	top:0;
+	right: 0;
+	left: 0;
+	background: #8B0000;
+	font-size: 17pt;
+	text-align: center;
+	box-shadow: 0 4px 2px #A0522D;
+
+}
+a{
+	transition: 1s;
+}
+#navbar a:link{
+	text-decoration: none;
+	color: white;
+
+}
+#navbar a:visited{
+	text-decoration: none;
+	color: white;
+}
+#navbar a:hover{
+	text-decoration: underline;
+}
+#navlist{
+	list-style-type: none;
+}
+li{
+	display: inline;
+	margin-right: 30px;
+}
+/*#toggle{
+	display: inline;
+	font-size: 10pt;
+	vertical-align: middle;
+}*/
+#select{
+	font-size: 30pt;
+	color: #8B0000;
+}
+#animate{
+	height: 10px;
+	width: 200px;
+	background: #A0522D;
+	animation-name: shift;
+	animation-duration: 5s;
+	animation-iteration-count: infinite;
+}
+@keyframes shift{
+	0%{transform: translateX(0);}
+	25%{transform: translateX(500px);}
+	50%{transform: translateX(0);}
+	75%{transform: translateX(-500px);}
+	100%{transform: translateX(0);}
+
+}
+#theme_area{
+	width: 70%;
+	margin-top: 20px;
+	padding-left: 27%;
+}
+#theme{
+	width: 30%;
+	border: 2px solid #376392;
+	border-radius: 5px;
+	float: left;
+}
+#text{
+	width: 100%;
+	background: #376392;
+	color: white;
+}
+#theme a:visited{
+	text-decoration: none;
+	color: #376392;
+}
+#select1{
+	font-family: Aharoni;
+	font-size: 20pt;
+	color: #376392;
+	transition: 0.5s;
+}
+#select1:hover{
+	border: 2px solid #376392;
+	border-radius: 5px;
+}
+#theme2{
+	width: 30%;
+	border: 2px solid #E372AC;
+	border-radius: 5px;
+	float: left;
+	margin-left: 30px;
+}
+#text2{
+	width: 100%;
+	background: #E372AC;
+	color: white;
+}
+#theme2 a:visited{
+	text-decoration: none;
+	color: #E372AC;
+}
+#select2{
+	font-family: Aharoni;
+	font-size: 20pt;
+	color: #E372AC;
+	transition: 0.5s;
+}
+#select2:hover{
+	border: 2px solid #E372AC;
+	border-radius: 5px;
+}

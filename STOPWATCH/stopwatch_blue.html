@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>STOPWATCH</title>
+	<meta charset="utf-8">
+	<link rel="stylesheet" type="text/css" href="stopwatch_blue.css">
+</head>
+<script type="text/javascript">
+	function startStopwatch(){
+		document.getElementById('start').style.visibility="hidden";
+		document.getElementById('pause').style.display="inline-block";
+		ml = milli.innerHTML;
+			ml++;
+			timing=setTimeout(startStopwatch, 10);
+			if (ml == 100){
+				if (sc.innerHTML<60){
+				sc.innerHTML++;
+				milli.innerHTML=0;
+				}
+				if (sc.innerHTML>59){
+					mn.innerHTML++;
+					sc.innerHTML=0;
+				}
+				if (mn.innerHTML>59){
+					hr.innerHTML++;
+					mn.innerHTML=0;
+				}
+			}
+			else{
+			milli.innerHTML = ml;
+		}
+	}
+	function pause(){
+		document.getElementById('pause').style.display="none";
+		document.getElementById('start').style.visibility="visible";
+		clearTimeout(timing);
+	}
+	function lap(){
+		lap1.innerHTML = "<p>" + lap1.innerHTML + hr.innerHTML + ":" + mn.innerHTML + ":" + sc.innerHTML + "." + milli.innerHTML + "</p>";	
+	}
+	function reset(){
+		hr.innerHTML = "00";
+		mn.innerHTML = "00";
+		sc.innerHTML = "00";
+		milli.innerHTML = "00";
+		clearTimeout(timing);
+		document.getElementById('pause').style.display="none";
+		document.getElementById('start').style.visibility="visible";
+
+	}
+</script>
+<body>
+	<main>
+		<section id="header"><img src="stopwatch.png" width="10%" height="20%"><span style="color: #376392; font-family: impact; font-size: 400%">STOPWATCH</span></section>
+		<div id="line"></div>
+		<table style="position: fixed; left: 37%;">
+			<tr>
+				<td id="hr">00</td>
+				<td>:</td>
+				<td id="mn">00</td>
+				<td>:</td>
+				<td id="sc">00</td>
+				<td>.</td>
+				<td id="milli" style="font-size: 70%;">00</td>
+			</tr>
+		</table>
+		<p align="center" style="margin-top: 15%">
+			<button id="lap" onclick="lap()"><abbr title="Lap"><img src="lap.png"></abbr></button>
+			<button id="start" onclick="startStopwatch()"><abbr title="Start"><img src="play.png"></abbr></button>
+			<button id="pause" onclick="pause()"><abbr title="Pause"><img src="pause.png"></abbr></button>
+			<button id="reset" onclick="reset()"><abbr title="Reset"><img src="reset.png"></abbr></button>
+		</p>
+		<div id="lap1">
+		</div>
+
+	</main>
+</body>
+</html>
