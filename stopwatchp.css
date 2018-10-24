@@ -61,7 +61,7 @@ main{
 	margin-top: 7px;
 }
 table{
-	margin: 20px auto;
+	margin: 1% auto;
 	font-size: 500%;
 	text-align: center;
 	font-family: lcd;
@@ -117,12 +117,12 @@ button:active{
 	border: 2px solid white;
 }
 #lap1{
-	margin-top: 5%;
+	margin-top: 3%;
 	font-family: lcd;
 	font-size: 150%;
 	column-count: 7;
-	height: 20px;
+	height: 200px;
 	border-top: 2px dashed white;
 	border-bottom: 2px dashed white;
-	overflow: scroll;
+	overflow: auto;
 }

@@ -7,6 +7,8 @@
 </head>
 <script type="text/javascript">
 	function startStopwatch(){
+		document.getElementById('lap').style.visibility="visible";
+		document.getElementById('reset').style.visibility="visible";
 		document.getElementById('start').style.visibility="hidden";
 		document.getElementById('pause').style.display="inline-block";
 		ml = milli.innerHTML;
@@ -37,16 +39,24 @@
 	}
 	function lap(){
 		lap1.innerHTML = lap1.innerHTML + hr.innerHTML + ":" + mn.innerHTML + ":" + sc.innerHTML + "." + milli.innerHTML + "<br>";
+		
 	}
 	function reset(){
-		hr.innerHTML = "00";
-		mn.innerHTML = "00";
-		sc.innerHTML = "00";
-		milli.innerHTML = "00";
-		clearTimeout(timing);
-		lap1.innerHTML="&nbsp;";
-		document.getElementById('pause').style.display="none";
-		document.getElementById('start').style.visibility="visible";
+		document.getElementById('lap').style.visibility="hidden";
+		document.getElementById('reset').style.visibility="hidden";
+		if(confirm("Are you sure you want to reset?")){
+			hr.innerHTML = "00";
+			mn.innerHTML = "00";
+			sc.innerHTML = "00";
+			milli.innerHTML = "00";
+			clearTimeout(timing);
+			lap1.innerHTML="&nbsp;";
+			document.getElementById('lap').style.visibility="hidden";
+			document.getElementById('reset').style.visibility="hidden";
+			document.getElementById('pause').style.display="none";
+			document.getElementById('start').style.visibility="visible";
+	}
+
 
 	}
 </script>
@@ -74,11 +84,11 @@
 				<td id="milli" style="font-size: 70%;">00</td>
 			</tr>
 		</table>
-		<p align="center" style="margin-top: 15%">
-			<button id="lap" onclick="lap()"><abbr title="Lap"><img src="STOPWATCH/lap.png"></abbr></button>
+		<p align="center" style="margin-top: 11%">
+			<button id="lap" onclick="lap()" style="visibility: hidden;"><abbr title="Lap"><img src="STOPWATCH/lap.png"></abbr></button>
 			<button id="start" onclick="startStopwatch()"><abbr title="Start"><img src="STOPWATCH/play.png"></abbr></button>
 			<button id="pause" onclick="pause()"><abbr title="Pause"><img src="STOPWATCH/pause.png"></abbr></button>
-			<button id="reset" onclick="reset()"><abbr title="Reset"><img src="STOPWATCH/reset.png"></abbr></button>
+			<button id="reset" onclick="reset()" style="visibility: hidden;"><abbr title="Reset"><img src="STOPWATCH/reset.png"></abbr></button>
 		</p>
 		<div id="lap1">
 		</div>

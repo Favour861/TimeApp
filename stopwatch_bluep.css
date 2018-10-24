@@ -117,13 +117,13 @@ button:active{
 	border: 2px solid #376392;
 }
 #lap1{
-	margin-top: 5%;
+	margin-top: 3%;
 	font-family: lcd;
 	font-size: 150%;
 	column-count: 7;
-	max-height: 500px;
-	border-top: 2px dashed #376392;
-	border-bottom: 2px dashed #376392;
+	height: 200px;
+	border-top: 2px dashed white;
+	border-bottom: 2px dashed white;
+	overflow: auto;
 	color: #376392;
-
 }

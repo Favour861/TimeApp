@@ -35,7 +35,11 @@
         // }
         // if (hr.value=0 && sc.value<0 && mn.value<0){
         //     alert("Time UP!!!");
-        
+         function noise(){
+          	alarmSound= new Audio()
+          	alarmSound.src = "tone.mp3";
+          	alarmSound.play();
+          }
         if (hr.value > 0){
 
             if(mn.value==""){
@@ -59,7 +63,7 @@
             }if (mn.value<0){
                 mn.value=0;
                 sc.value=0;
-                alert("Time UP!!!");
+                noise();
             }
         }
         if(sc.value >= 1 && sc.value<=60){
